@@ -75,4 +75,20 @@ VisualTab:CreateLabel(" ", nil, Color3.fromRGB(30,30,30), false)
 
 ---------------------------------------------------------------------------------------------------------------
 
+local FOVSlider = VisualTab:CreateSlider({   ------------------------------------- FOV
+    Name = "Field of View",
+    Range = {70, 120}, -- minimum és maximum érték
+    Increment = 1,     -- lépésköz
+    Suffix = "°",      -- megjelenő egység
+    CurrentValue = 70, -- alapértelmezett érték
+    Flag = "FOVSlider",
+    Callback = function(value)
+        Workspace.CurrentCamera.FieldOfView = value
+    end,
+})
+
+VisualTab:CreateLabel(" ", nil, Color3.fromRGB(30,30,30), false)
+
+---------------------------------------------------------------------------------------------------------------
+
 VisualTab:CreateLabel(" Comming soon... ", nil, Color3.fromRGB(30,30,30), false)

@@ -1,4 +1,4 @@
-local VisualTab = Window:CreateTab(" 👁️ Visual ", 4483362458)
+local VisualTab = Window:CreateTab(" 👁️ Visual ", nil)
 
 ---------------------------------------------------------------------------------------------------------------
 

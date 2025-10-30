@@ -46,4 +46,33 @@ VisualTab:CreateLabel(" ", nil, Color3.fromRGB(30,30,30), false)
 
 ---------------------------------------------------------------------------------------------------------------
 
+local function toggleFullBright(value)   ------------------------------------- FullBright
+    if value then
+        Lighting.Brightness = 2
+        Lighting.ClockTime = 14
+        Lighting.FogEnd = 100000
+        Lighting.GlobalShadows = false
+        Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
+    else
+        Lighting.Brightness = 1
+        Lighting.ClockTime = 14
+        Lighting.FogEnd = 1000
+        Lighting.GlobalShadows = true
+        Lighting.OutdoorAmbient = Color3.new(0.5, 0.5, 0.5)
+    end
+end
+
+local FullBrightToggle = VisualTab:CreateToggle({
+    Name = "Full Bright",
+    CurrentValue = false,
+    Flag = "FullBrightToggle",
+    Callback = function(Value)
+        toggleFullBright(Value)
+    end,
+})
+
+VisualTab:CreateLabel(" ", nil, Color3.fromRGB(30,30,30), false)
+
+---------------------------------------------------------------------------------------------------------------
+
 VisualTab:CreateLabel(" Comming soon... ", nil, Color3.fromRGB(30,30,30), false)

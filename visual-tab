@@ -33,7 +33,7 @@ local function toggleESP(value)
     end
 end
 
-local ESPToggle = Tab:CreateToggle({
+local ESPToggle = VisualTab:CreateToggle({
     Name = "ESP",
     CurrentValue = false,
     Flag = "ESPToggle",
